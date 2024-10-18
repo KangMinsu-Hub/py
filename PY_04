@@ -106,5 +106,134 @@ Life is too short, you need python
 
 
 
+# 04장
+
+'''
+>>> def is_odd(number):
+...     if number % 2 == 1:
+...         return True
+...     else:
+...         return False
+  File "<stdin>", line 5
+    return False
+TabError: inconsistent use of tabs and spaces in indentation
+>>> is_odd(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'is_odd' is not defined
+>>> is_odd(4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'is_odd' is not defined
+'''
+
+
+'''
+>>> def avg_numbers(*args):
+...     result = 0
+...     for i in args:
+...         result += 1
+...     return result / len(args)
+... 
+>>> avg_number(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'avg_number' is not defined. Did you mean: 'avg_numbers'?
+>>> avg_numbers(1,2,3,4,5)
+1.0
+>>> avg_numbers(1,2)
+1.0
+>>> 
+'''
+
+
+'''
+input1 = input("첫 번째 숫자를 입력하세요:")
+input2 = input("두 번째 숫자를 입력하세요:")
+
+total = int(input1) + int(input2)
+print("두 수의 합은 %s닙니다" % total)
+'''
+
+'''
+>>> print("you"+"need"+"python")
+youneedpython
+>>> print("you" "need" "python")
+youneedpython
+>>> print("you", "need", "python")
+you need python
+>>> print("".join(["you", "need", "python"]))
+youneedpython
+>>> 
+'''
+
+'''
+f1 = open("test.txt", 'w')
+f1.write("Life is too short!")
+
+f2 = open("tsst.txt", 'r')
+print(f2.read())
+f2.close()
+'''
+
+'''
+with open("test.txt", 'w') as f1:
+    f1.write("Life is too short!")
+
+with open("test.txt", 'r') as f2:
+    print(f2.read())
+'''
+
+'''
+user_input = input("저장할 내용을 입력하세요:")
+f = open('test.txt', 'a')
+f.write(user_input)
+f.write("\n")
+f.close()
+'''
+
+'''
+f = open('test.txt', 'r')
+body = f.read()
+f.close()
+
+body = body.replace('java', 'python')
+
+f = open('test.txt', 'w')
+f.write(body)
+f.close()
+'''
+
+'''
+import sys
+numbers = sys.argv[1:]
+
+result = 0
+for number in numbers:
+  result += int(number)
+print(result)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
