@@ -1,0 +1,150 @@
+'''
+class UpgradeCalculator(Calculator):
+    def minus(self, val):
+        self.value -= val
+'''
+'''
+class MaxLimitCalculator(Calculator):
+    def add(self, val):
+        self.value += val
+        if self.value > 100:
+            self.value = 100
+'''
+'''
+SyntaxError: invalid syntax
+>>> all([1, 2, abs(-3)-3])
+False
+>>> chr(ord('a')) == 'a'
+True
+'''
+
+'''
+>>> list(filter(lambda x: x>0, [1, -2, 3, -5, 8, -3]))
+[1, 3, 8]
+'''
+'''
+>>> int('0xea', 16)
+234
+'''
+'''
+>>> list(map(lambda x:x*3, [1, 2, 3, 4]))
+[3, 6, 9, 12]
+'''
+
+'''
+>>> a = [-8, 2, 7, 5, -3, 5, 0, 1]
+>>> max(a) + min(a)
+-1
+'''
+
+'''
+>>> round(17/3, 4)
+5.6667
+'''
+
+'''
+>>> time.strftime("%Y/%m/%d %H:%M:%S")
+'2024/11/08 10:56:18'
+'''
+
+'''
+import random
+
+result = []
+while len(result) < 6:
+    num = random.randint(1, 45)
+    if num not in result:
+        result.append(num)
+
+print(result)
+'''
+
+'''
+>>> import datatime
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'datatime'
+>>> sister = datatime.date(1995, 11, 20)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'datatime' is not defined
+>>> me = datatime.date(1998, 10, 6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'datatime' is not defined
+>>> (me-sister).days
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'me' is not defined
+>>> 
+'''
+
+'''
+import operator
+
+data = [('윤서현', 15.25),
+        ('김예지', 13.31),
+        ('박예원', 15.34),
+        ('송순자', 15.57),
+        ('김시우', 15.48),
+        ('배숙자', 17.9),
+        ('전정웅', 13.39),
+        ('김혜진', 16.63),
+        ('최보람', 17.14),
+        ('한지영', 14.83),
+        ('이성호', 17.7),
+        ('김옥순', 16.71),
+        ('황민지', 17.65),
+        ('김영철', 16.7),
+        ('주병철', 15.67),
+        ('박상현', 14.16),
+        ('김영순', 14.81),
+        ('오지아', 15.13),
+        ('운지은', 16.93),
+        ('문재호', 16.39)]
+
+data sorted(data, key=operator.itemgetter(1))
+for d in data:
+    print(d)
+'''
+
+'''
+import itertools
+students = ['나지혜', '성석민', '윤지현', '김정숙']
+result = itertools.combinations(students, 2)
+print(list(result))
+'''
+
+'''
+import itertools
+
+a = 'abcd'
+result = itertools.permutations(a, 4)
+for r in result:
+    print(''.join(r))
+'''
+
+'''
+import random
+import itertools
+
+people = ['김승현', '김진호', '강춘자', '이예준', '김현주']
+duty = ['청소', '빨래', '설거지']
+
+random.sample(people, len(people))
+result = itertools.zip_longest(people, duty, fillvalue='휴식')
+for r in result:
+    print(r)
+'''
+
+'''
+import math
+
+width = 200
+height = 80
+
+sqare_size = math.gcd(200, 80)
+print("타일 한 선의 길이: {}".format(int(width_count * height_count)))
+'''
+
+
